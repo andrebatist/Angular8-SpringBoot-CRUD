@@ -27,7 +27,7 @@ export class CreateEmployeeComponent implements OnInit {
   async save() {
     this.employeeService.createEmployee(this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
-    await this.delay(100);
+    await this.delay(1000);
     this.employee = new Employee();
     this.goToList();
   }

@@ -29,7 +29,7 @@ export class UpdateEmployeeComponent implements OnInit {
   async updateEmployee() {
     this.employeeService.updateEmployee(this.id, this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
-    await this.delay(100);
+    await this.delay(1000);
     this.employee = new Employee();
     this.goToList();
   }
